@@ -1,0 +1,159 @@
+@import "reset.css";
+
+:root {
+  /* Color */
+  --color-white: #fff;
+  --color-light-gray: #f0f2f5;
+  --color-gray: #8a8d91;
+  --color-blue: #1877f2;
+  --color-dark-blue: #166fe5;
+  --color-green: #42b72a;
+  --color-dark-green: #36a420;
+  --border-color: #ccd0d5;
+
+  /* Font size */
+  --font-extra: 28px;
+  --font-large: 24px;
+  --font-medium: 20px;
+  --font-regular: 16px;
+  --font-small: 14px;
+  --font-micro: 12px;
+
+  /* Font weight */
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* Border radius */
+  --radius-light: 4px;
+  --radius-bold: 8px;
+
+  /* Transition */
+  --transition: 200ms;
+}
+
+/* Universal */
+* {
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: var(--weight-regular);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  color: black;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+ul {
+  list-style: none;
+}
+
+/* Main */
+#main {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-light-gray);
+  padding: 130px 50px 200px;
+}
+
+/* Left */
+.left {
+  width: 500px;
+  padding-top: 40px;
+  padding-right: 70px;
+}
+.left .logo {
+  width: 300px;
+  height: auto;
+  position: relative;
+  left: -25px;
+  top: 10px;
+}
+.left h1 {
+  font-size: var(--font-extra);
+  letter-spacing: 0.75px;
+  line-height: 1.2;
+}
+.left h1 span {
+  font-weight: var(--weight-bold);
+}
+
+/* Right */
+.right {
+  width: 400px;
+  border-radius: var(--radius-bold);
+}
+.right .account {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2.5px 5px var(--color-gray);
+  padding: 14px 20px 8px;
+  border-radius: var(--radius-bold);
+  background-color: var(--color-white);
+  text-align: center;
+}
+.right .account input {
+  border: 0.1px solid var(--border-color);
+  padding: 16px;
+  border-radius: var(--radius-light);
+  font-size: var(--font-regular);
+  margin: 6px 0;
+}
+.right .account input::placeholder {
+  color: var(--color-gray);
+}
+.right .account input:focus {
+  caret-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  outline: 2px solid #e7f3ff;
+}
+.right .login {
+  background-color: var(--color-blue);
+  color: white;
+  padding: 12px;
+  transition: all var(--transition) ease-in-out;
+  border-radius: var(--radius-light);
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  margin: 8px 0;
+}
+.right .login:hover {
+  background-color: var(--color-dark-blue);
+}
+.right .forgot {
+  color: var(--color-blue);
+  font-size: var(--font-small);
+  margin: 12px 0;
+}
+.right .underline {
+  height: 1px;
+  margin: 12px 0;
+  background-color: var(--color-gray);
+  opacity: 0.33;
+}
+.right .signup {
+  color: white;
+  width: 35%;
+  padding: 14px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 12px auto;
+  background-color: var(--color-green);
+  transition: all var(--transition) ease-in-out;
+  border-radius: var(--radius-light);
+}
+.right .signup:hover {
+  background-color: var(--color-dark-green);
+}
+.right p {
+  margin-top: 24px;
+  font-size: var(--font-small);
+  text-align: center;
+}
+.right p a {
+  font-weight: var(--weight-bold);
+}
