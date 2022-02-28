@@ -5,6 +5,7 @@
   --color-white: #fff;
   --color-light-gray: #f0f2f5;
   --color-gray: #8a8d91;
+  --color-dark-gray: #6e6e6e;
   --color-blue: #1877f2;
   --color-dark-blue: #166fe5;
   --color-green: #42b72a;
@@ -35,6 +36,7 @@
 * {
   font-family: "Nanum Gothic", sans-serif;
   font-weight: var(--weight-regular);
+  letter-spacing: 0.5px;
 }
 a {
   text-decoration: none;
@@ -57,7 +59,7 @@ ul {
   display: flex;
   justify-content: center;
   background-color: var(--color-light-gray);
-  padding: 130px 50px 200px;
+  padding: 130px 50px 190px;
 }
 
 /* Left */
@@ -75,7 +77,6 @@ ul {
 }
 .left h1 {
   font-size: var(--font-extra);
-  letter-spacing: 0.75px;
   line-height: 1.2;
 }
 .left h1 span {
@@ -90,8 +91,8 @@ ul {
 .right .account {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2.5px 5px var(--color-gray);
-  padding: 14px 20px 8px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  padding: 14px 20px;
   border-radius: var(--radius-bold);
   background-color: var(--color-white);
   text-align: center;
@@ -101,6 +102,7 @@ ul {
   padding: 16px;
   border-radius: var(--radius-light);
   font-size: var(--font-regular);
+  font-size: 18px;
   margin: 6px 0;
 }
 .right .account input::placeholder {
@@ -150,10 +152,67 @@ ul {
   background-color: var(--color-dark-green);
 }
 .right p {
-  margin-top: 24px;
+  margin-top: 30px;
   font-size: var(--font-small);
   text-align: center;
 }
 .right p a {
   font-weight: var(--weight-bold);
+}
+
+/* Footer */
+#footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  font-size: var(--font-micro);
+}
+#footer ul {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: center;
+}
+#footer ul li:hover {
+  text-decoration: underline;
+}
+#footer ul li a {
+  color: var(--color-gray);
+}
+#footer .underline {
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: var(--color-gray);
+  opacity: 0.25;
+}
+.language {
+  padding-bottom: 12px;
+}
+.language li {
+  padding-right: 12px;
+}
+.language li.active {
+  color: var(--color-dark-gray);
+  text-decoration: none;
+}
+.more {
+  padding: 0px 8px;
+  font-weight: var(--weight-bold);
+  border: 1px solid var(--color-gray);
+  border-radius: var(--radius-light);
+  font-size: var(--font-regular);
+}
+.information {
+  margin-left: -18px;
+  padding: 8px 0;
+}
+.information li {
+  padding-left: 18px;
+  line-height: 20px;
+}
+.copyright {
+  font-size: var(--font-micro);
+  margin-top: 12px;
+  color: var(--color-dark-gray);
 }
