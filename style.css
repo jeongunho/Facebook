@@ -10,7 +10,8 @@
   --color-dark-blue: #166fe5;
   --color-green: #42b72a;
   --color-dark-green: #36a420;
-  --border-color: #ccd0d5;
+  --input-color: #dddfe2;
+  --button-color: #ccd0d5;
 
   /* Font size */
   --font-extra: 28px;
@@ -25,7 +26,8 @@
   --weight-bold: 700;
 
   /* Border radius */
-  --radius-light: 4px;
+  --radius-light: 2px;
+  --radius-regular: 6px;
   --radius-bold: 8px;
 
   /* Transition */
@@ -98,9 +100,9 @@ ul {
   text-align: center;
 }
 .right .account input {
-  border: 0.1px solid var(--border-color);
+  border: 1px solid var(--input-color);
   padding: 16px;
-  border-radius: var(--radius-light);
+  border-radius: var(--radius-regular);
   font-size: var(--font-regular);
   margin: 6px 0;
 }
@@ -117,7 +119,7 @@ ul {
   color: white;
   padding: 12px;
   transition: all var(--transition) ease-in-out;
-  border-radius: var(--radius-light);
+  border-radius: var(--radius-regular);
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   margin: 8px 0;
@@ -145,7 +147,7 @@ ul {
   margin: 12px auto;
   background-color: var(--color-green);
   transition: all var(--transition) ease-in-out;
-  border-radius: var(--radius-light);
+  border-radius: var(--radius-regular);
 }
 .right .signup:hover {
   background-color: var(--color-dark-green);
@@ -190,7 +192,7 @@ ul {
   padding-bottom: 10px;
 }
 .language li {
-  padding-right: 10px;
+  padding-right: 8px;
 }
 .language li.active {
   color: var(--color-dark-gray);
@@ -199,9 +201,15 @@ ul {
 .more {
   padding: 0 8px;
   font-weight: var(--weight-bold);
-  border: 1px solid var(--color-gray);
+  border: 1px solid var(--button-color);
+  background-color: #f5f6f7;
   border-radius: var(--radius-light);
   font-size: var(--font-regular);
+  transition: all var(--transition) ease-in-out;
+  color: var(--color-dark-gray);
+}
+.more:hover {
+  background-color: #ebedf0;
 }
 .information {
   margin-left: -16px;
